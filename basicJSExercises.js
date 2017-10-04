@@ -134,15 +134,18 @@ Output:
  --------------------------- */
 
 function remove_duplicates(arr) {
-  
-    return arr.filter(function(elem,i,rep){
-   return i == rep.indexOf(elem);
-})
+ var unique='';
+ for(var i=0 ;i<arr.length;++i){
+  if( unique. indexOf(arr[i])== -1){
+    unique+=arr[i];
+  }
+ }
+return unique;
 }
 
 console.log("Remove Duplicate Values:");
 /*Uncomment the following to check */
- remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+console.log(remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]));
 
 
 /* ---------------------------
